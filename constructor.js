@@ -35,10 +35,36 @@ function expect(target) {
 // \___/\____/_/ /_/____/\__/_/   \__,_/\___/\__/\____/_/  /____/
 //
 // Only add code to *THIS* section!
+function Dog(K9){
+  this.status = 'normal'
+  this.hungry = true
+  if (K9) {
+    if (K9.color !== undefined){
+      this.color = K9.color
+    }
+    if (K9.hungry !== undefined){
+      this.hungry = K9.hungry
+    }
+  }
+}
 
-// ????????
-// ????????
-// ????????
+function Human(person){
+    this.cool = false
+    if (person){
+      if (person.cool){
+        this.cool = person.cool
+      } 
+     }
+  }
+
+Human.prototype.pet = function(dog){
+  dog.status = 'happy'
+}
+
+Human.prototype.feed = function(dog){
+  dog.hungry = false
+}
+
 
 
 //        __
